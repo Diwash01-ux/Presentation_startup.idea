@@ -3,89 +3,1399 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>YuwaVoice Nepal — Presentation</title>
+
 <style>
-:root{--bg:#08111f;--blue:#1268d8;--cyan:#38bdf8;--white:#fff;--muted:#aebdce;--line:rgba(255,255,255,.12);--card:rgba(255,255,255,.07)}
-*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:#fff}
-body{background:radial-gradient(circle at 75% 15%,rgba(18,104,216,.24),transparent 28%),radial-gradient(circle at 15% 80%,rgba(56,189,248,.10),transparent 25%),var(--bg)}
-.slide{display:none;height:100vh;padding:55px 8vw 80px;position:relative;overflow:auto}.slide.active{display:flex;flex-direction:column;justify-content:center}
-.logo{position:absolute;top:25px;left:8vw;font-weight:800;font-size:17px}.logo span{font-size:22px;margin-right:7px}
-.kicker{color:var(--cyan);font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-bottom:14px}
-h1{font-size:clamp(42px,6vw,82px);line-height:.98;margin:0 0 20px;max-width:1000px}h2{font-size:clamp(34px,4vw,58px);margin:0 0 18px}h3{font-size:21px;margin:0 0 10px}
-p{font-size:clamp(17px,1.7vw,23px);line-height:1.55;color:#d7e1ec;max-width:900px}.highlight{color:#58c7ff}.subtitle{font-size:clamp(19px,2vw,27px);color:#c8d5e4;max-width:850px}.small{font-size:13px;color:var(--muted);line-height:1.5}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:25px;max-width:1100px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:25px;backdrop-filter:blur(8px)}
-.icon{font-size:38px;margin-bottom:14px}.problem{display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1100px;align-items:center}.problem-box{border:1px solid var(--line);background:rgba(255,255,255,.05);padding:30px;border-radius:24px}.big-emoji{font-size:80px}
-.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:30px;max-width:1100px}.step{flex:1;min-width:135px;text-align:center;padding:20px 12px;border:1px solid var(--line);background:var(--card);border-radius:18px}.arrow{font-size:24px;color:var(--cyan)}
-.demo{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:1100px;margin-top:20px}.demo-window{background:#f5f7fb;color:#172033;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.2);box-shadow:0 20px 50px rgba(0,0,0,.25)}.demo-top{background:#0d1b2a;color:#fff;padding:13px 18px;font-weight:700}.demo-body{padding:22px}.mini-row{display:flex;gap:10px;margin:12px 0}.mini{flex:1;border:1px solid #e4e7ec;border-radius:10px;padding:12px;font-size:12px;background:#fff}.mini b{display:block;font-size:20px;margin-top:5px}.demo-button{display:inline-block;background:#1268d8;color:#fff;padding:10px 14px;border-radius:8px;font-weight:700;margin-top:8px}
-.tech{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;max-width:1050px;margin-top:25px}.tech .card{text-align:center;padding:22px}.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1100px;margin-top:25px}.number{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:var(--blue);font-weight:800;margin-bottom:15px}
-.final{text-align:center;align-items:center}.final p{margin-left:auto;margin-right:auto}.quote{border-left:4px solid var(--cyan);padding:12px 20px;margin-top:22px;text-align:left;max-width:850px;background:rgba(255,255,255,.04);border-radius:0 12px 12px 0}
-.controls{position:fixed;bottom:20px;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:14px;z-index:50}.controls button{border:1px solid var(--line);background:rgba(10,25,42,.9);color:#fff;border-radius:10px;padding:10px 16px;cursor:pointer;font-weight:700}.controls button:hover{background:#173451}
-.progress{position:fixed;top:0;left:0;height:4px;background:var(--cyan);z-index:60;transition:width .25s}.counter{position:fixed;right:8vw;top:27px;color:var(--muted);font-size:13px}.note{display:inline-block;margin-top:16px;padding:8px 12px;border-radius:999px;background:rgba(56,189,248,.1);border:1px solid rgba(56,189,248,.25);color:#9ddfff;font-size:12px}
-@media(max-width:800px){.slide{padding:55px 6vw 80px}.problem,.demo{grid-template-columns:1fr}.grid,.tech,.timeline{grid-template-columns:1fr 1fr}.flow{gap:7px}.arrow{display:none}}
-@media(max-width:520px){h1{font-size:43px}.grid,.tech,.timeline{grid-template-columns:1fr}.card{padding:18px}.big-emoji{font-size:55px}}
+:root{
+  --bg:#08111f;
+  --blue:#1268d8;
+  --cyan:#38bdf8;
+  --white:#ffffff;
+  --muted:#aebdce;
+  --line:rgba(255,255,255,.12);
+  --card:rgba(255,255,255,.07);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:white;
+}
+
+body{
+  background:
+    radial-gradient(circle at 75% 15%,rgba(18,104,216,.24),transparent 28%),
+    radial-gradient(circle at 15% 80%,rgba(56,189,248,.10),transparent 25%),
+    var(--bg);
+}
+
+/* SLIDES */
+
+.slide{
+  display:none;
+  height:100vh;
+  padding:55px 8vw 80px;
+  position:relative;
+  overflow:auto;
+}
+
+.slide.active{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+/* BRAND */
+
+.logo{
+  position:absolute;
+  top:25px;
+  left:8vw;
+  font-weight:800;
+  font-size:17px;
+}
+
+.logo span{
+  font-size:22px;
+  margin-right:7px;
+}
+
+/* TEXT */
+
+.kicker{
+  color:var(--cyan);
+  font-weight:800;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+h1{
+  font-size:clamp(42px,6vw,82px);
+  line-height:.98;
+  margin:0 0 20px;
+  max-width:1000px;
+}
+
+h2{
+  font-size:clamp(34px,4vw,58px);
+  margin:0 0 18px;
+}
+
+h3{
+  font-size:21px;
+  margin:0 0 10px;
+}
+
+p{
+  font-size:clamp(17px,1.7vw,23px);
+  line-height:1.55;
+  color:#d7e1ec;
+  max-width:900px;
+}
+
+.highlight{
+  color:#58c7ff;
+}
+
+.subtitle{
+  font-size:clamp(19px,2vw,27px);
+  color:#c8d5e4;
+  max-width:850px;
+}
+
+.small{
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:25px;
+  max-width:1100px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:25px;
+  backdrop-filter:blur(8px);
+}
+
+.icon{
+  font-size:38px;
+  margin-bottom:14px;
+}
+
+/* PROBLEM */
+
+.problem{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  max-width:1100px;
+  align-items:center;
+}
+
+.problem-box{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.05);
+  padding:30px;
+  border-radius:24px;
+}
+
+.big-emoji{
+  font-size:80px;
+}
+
+/* FLOW */
+
+.flow{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:30px;
+  max-width:1100px;
+}
+
+.step{
+  flex:1;
+  min-width:135px;
+  text-align:center;
+  padding:20px 12px;
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:18px;
+}
+
+.arrow{
+  font-size:24px;
+  color:var(--cyan);
+}
+
+/* DEMO */
+
+.demo{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  max-width:1100px;
+  margin-top:20px;
+}
+
+.demo-window{
+  background:#f5f7fb;
+  color:#172033;
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 20px 50px rgba(0,0,0,.25);
+}
+
+.demo-top{
+  background:#0d1b2a;
+  color:white;
+  padding:13px 18px;
+  font-weight:700;
+}
+
+.demo-body{
+  padding:22px;
+}
+
+.mini-row{
+  display:flex;
+  gap:10px;
+  margin:12px 0;
+}
+
+.mini{
+  flex:1;
+  border:1px solid #e4e7ec;
+  border-radius:10px;
+  padding:12px;
+  font-size:12px;
+  background:white;
+}
+
+.mini b{
+  display:block;
+  font-size:20px;
+  margin-top:5px;
+}
+
+.demo-button{
+  display:inline-block;
+  background:#1268d8;
+  color:white;
+  padding:10px 14px;
+  border-radius:8px;
+  font-weight:700;
+  margin-top:8px;
+}
+
+/* TECHNOLOGY */
+
+.tech{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  max-width:1050px;
+  margin-top:25px;
+}
+
+.tech .card{
+  text-align:center;
+  padding:22px;
+}
+
+/* TIMELINE */
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+  max-width:1100px;
+  margin-top:25px;
+}
+
+.number{
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--blue);
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+/* FINAL */
+
+.final{
+  text-align:center;
+  align-items:center;
+}
+
+.final p{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.quote{
+  border-left:4px solid var(--cyan);
+  padding:12px 20px;
+  margin-top:22px;
+  text-align:left;
+  max-width:850px;
+  background:rgba(255,255,255,.04);
+  border-radius:0 12px 12px 0;
+}
+
+/* CONTROLS */
+
+.controls{
+  position:fixed;
+  bottom:20px;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  z-index:50;
+}
+
+.controls button{
+  border:1px solid var(--line);
+  background:rgba(10,25,42,.9);
+  color:white;
+  border-radius:10px;
+  padding:10px 16px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.controls button:hover{
+  background:#173451;
+}
+
+.progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:4px;
+  background:var(--cyan);
+  z-index:60;
+  transition:width .25s;
+}
+
+.counter{
+  position:fixed;
+  right:8vw;
+  top:27px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.note{
+  display:inline-block;
+  margin-top:16px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(56,189,248,.1);
+  border:1px solid rgba(56,189,248,.25);
+  color:#9ddfff;
+  font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .slide{
+    padding:55px 6vw 80px;
+  }
+
+  .problem,
+  .demo{
+    grid-template-columns:1fr;
+  }
+
+  .grid,
+  .tech,
+  .timeline{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .flow{
+    gap:7px;
+  }
+
+  .arrow{
+    display:none;
+  }
+}
+
+@media(max-width:520px){
+
+  h1{
+    font-size:43px;
+  }
+
+  .grid,
+  .tech,
+  .timeline{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:18px;
+  }
+
+  .big-emoji{
+    font-size:55px;
+  }
+}
 </style>
 </head>
+
 <body>
-<div class="progress" id="progress"></div><div class="counter" id="counter"></div>
+
+<div class="progress" id="progress"></div>
+
+<div class="counter" id="counter"></div>
+
+
+<!-- ========================= -->
+<!-- SLIDE 1 -->
+<!-- ========================= -->
 
 <section class="slide active">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">University Startup Concept</div>
-<h1>Your voice.<br><span class="highlight">Your choice.</span><br>Your future.</h1>
-<p class="subtitle">A civic-technology concept designed to make electoral information and future participation more accessible to Nepali citizens living abroad.</p><div class="note">Prototype presentation · Version 1.0</div>
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    University Startup Concept
+  </div>
+
+  <h1>
+    Your voice.<br>
+    <span class="highlight">Your choice.</span><br>
+    Your future.
+  </h1>
+
+  <p class="subtitle">
+    A civic-technology concept designed to make
+    electoral information and future participation
+    more accessible to Nepali citizens living abroad.
+  </p>
+
+  <div class="note">
+    Prototype presentation · Version 1.0
+  </div>
+
 </section>
 
-<section class="slide">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">01 · The Problem</div><h2>A problem I started thinking about</h2>
-<div class="problem"><div class="problem-box"><div class="big-emoji">🌏</div><h3>Nepalis living abroad</h3><p>People leave Nepal for education, employment and other opportunities. Participating in Nepal's electoral process from abroad can involve practical difficulties.</p></div>
-<div class="problem-box"><h3>My question</h3><p class="subtitle">“What if technology could make access to electoral information and future participation easier, while keeping the official election process secure?”</p></div></div>
-</section>
+
+<!-- ========================= -->
+<!-- SLIDE 2 -->
+<!-- ========================= -->
 
 <section class="slide">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">02 · The Idea</div><h2>My startup idea: <span class="highlight">YuwaVoice Nepal</span></h2>
-<p>A neutral online platform that could provide accessible candidate information, issue-by-issue comparisons, civic information, and—if legally approved and technically feasible—a secure pathway for participation from abroad.</p>
-<div class="grid"><div class="card"><div class="icon">📋</div><h3>Information</h3><p class="small">Clear, structured information from official or reliable sources.</p></div><div class="card"><div class="icon">⚖️</div><h3>Comparison</h3><p class="small">Show the same issues for candidates without telling citizens who is “best.”</p></div><div class="card"><div class="icon">🔐</div><h3>Future Security</h3><p class="small">Explore identity verification, privacy, auditability and secure participation.</p></div></div>
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    01 · The Problem
+  </div>
+
+  <h2>
+    A problem I started thinking about
+  </h2>
+
+  <div class="problem">
+
+    <div class="problem-box">
+
+      <div class="big-emoji">
+        🌏
+      </div>
+
+      <h3>
+        Nepalis living abroad
+      </h3>
+
+      <p>
+        People leave Nepal for education,
+        employment and other opportunities.
+        Participating in Nepal's electoral process
+        from abroad can involve practical difficulties.
+      </p>
+
+    </div>
+
+
+    <div class="problem-box">
+
+      <h3>
+        My question
+      </h3>
+
+      <p class="subtitle">
+
+        “What if technology could make access
+        to electoral information and future
+        participation easier, while keeping the
+        official election process secure?”
+
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="slide">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">03 · How It Could Work</div><h2>From citizen to secure participation</h2>
-<div class="flow"><div class="step">👤<br><b>Citizen</b><br><span class="small">Eligible user</span></div><div class="arrow">→</div><div class="step">🔐<br><b>Verify</b><br><span class="small">Approved identity system</span></div><div class="arrow">→</div><div class="step">📋<br><b>Learn</b><br><span class="small">Verified information</span></div><div class="arrow">→</div><div class="step">⚖️<br><b>Compare</b><br><span class="small">Same issues</span></div><div class="arrow">→</div><div class="step">🗳️<br><b>Participate</b><br><span class="small">Future concept</span></div></div>
-<p class="small">The final voting mechanism would require legal authorization, official cooperation, rigorous security testing and compliance with election requirements.</p>
-</section>
+
+<!-- ========================= -->
+<!-- SLIDE 3 -->
+<!-- ========================= -->
 
 <section class="slide">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">04 · Live Prototype</div><h2>This is what I built</h2>
-<div class="demo"><div class="demo-window"><div class="demo-top">🇳🇵 YuwaVoice Dashboard</div><div class="demo-body"><div class="mini-row"><div class="mini">Demo Participants<b>1,240</b></div><div class="mini">Candidate Profiles<b>3</b></div></div><div class="mini-row"><div class="mini">Issues Compared<b>6</b></div><div class="mini">Countries<b>18</b></div></div><div class="demo-button">View Candidates →</div></div></div>
-<div><h3>Live demo flow</h3><p>First I show the dashboard. Then I open the candidate profiles, move to the issue comparison, and demonstrate the non-binding youth preference feature.</p><p class="small">The candidate profiles and numbers in this university prototype are fictional sample data.</p></div></div>
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    02 · The Idea
+  </div>
+
+  <h2>
+    My startup idea:
+    <span class="highlight">
+      YuwaVoice Nepal
+    </span>
+  </h2>
+
+  <p>
+
+    A neutral online platform that could provide
+    accessible candidate information,
+    issue-by-issue comparisons, civic information,
+    and—if legally approved and technically feasible—
+    a secure pathway for participation from abroad.
+
+  </p>
+
+
+  <div class="grid">
+
+    <div class="card">
+
+      <div class="icon">
+        📋
+      </div>
+
+      <h3>
+        Information
+      </h3>
+
+      <p class="small">
+
+        Clear, structured information from
+        official or reliable sources.
+
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        ⚖️
+      </div>
+
+      <h3>
+        Comparison
+      </h3>
+
+      <p class="small">
+
+        Show the same issues for candidates
+        without telling citizens who is “best.”
+
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        🔐
+      </div>
+
+      <h3>
+        Future Security
+      </h3>
+
+      <p class="small">
+
+        Explore identity verification,
+        privacy, auditability and
+        secure participation.
+
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 
-<section class="slide">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">05 · Product Experience</div><h2>Information before preference</h2>
-<div class="grid"><div class="card"><div class="icon">👥</div><h3>Candidate Profiles</h3><p class="small">A simple profile page for each candidate, using verified information in a future real version.</p></div><div class="card"><div class="icon">📊</div><h3>Issue Comparison</h3><p class="small">The same topics can be displayed side by side so users can form their own views.</p></div><div class="card"><div class="icon">🗳️</div><h3>Demo Preference</h3><p class="small">The current poll is only a UI demonstration. It does not record a real election vote.</p></div></div>
-</section>
+
+<!-- ========================= -->
+<!-- SLIDE 4 -->
+<!-- ========================= -->
 
 <section class="slide">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">06 · Technology</div><h2>What I have built vs. what comes next</h2>
-<div class="tech"><div class="card"><div class="icon">🌐</div><h3>HTML</h3><p class="small">Structure</p></div><div class="card"><div class="icon">🎨</div><h3>CSS</h3><p class="small">Responsive design</p></div><div class="card"><div class="icon">⚡</div><h3>JavaScript</h3><p class="small">Interactions</p></div><div class="card"><div class="icon">☁️</div><h3>Deployment</h3><p class="small">Web prototype</p></div></div>
-<div class="grid"><div class="card"><h3>Next: Backend</h3><p class="small">Database, accounts and verified content.</p></div><div class="card"><h3>Next: Security</h3><p class="small">Authentication, privacy, encryption and audit systems.</p></div><div class="card"><h3>Next: Research</h3><p class="small">Legal, technical and electoral requirements before any official integration.</p></div></div>
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    03 · How It Could Work
+  </div>
+
+  <h2>
+    From citizen to secure participation
+  </h2>
+
+
+  <div class="flow">
+
+    <div class="step">
+
+      👤<br>
+
+      <b>
+        Citizen
+      </b>
+
+      <br>
+
+      <span class="small">
+        Eligible user
+      </span>
+
+    </div>
+
+
+    <div class="arrow">
+      →
+    </div>
+
+
+    <div class="step">
+
+      🔐<br>
+
+      <b>
+        Verify
+      </b>
+
+      <br>
+
+      <span class="small">
+        Approved identity system
+      </span>
+
+    </div>
+
+
+    <div class="arrow">
+      →
+    </div>
+
+
+    <div class="step">
+
+      📋<br>
+
+      <b>
+        Learn
+      </b>
+
+      <br>
+
+      <span class="small">
+        Verified information
+      </span>
+
+    </div>
+
+
+    <div class="arrow">
+      →
+    </div>
+
+
+    <div class="step">
+
+      ⚖️<br>
+
+      <b>
+        Compare
+      </b>
+
+      <br>
+
+      <span class="small">
+        Same issues
+      </span>
+
+    </div>
+
+
+    <div class="arrow">
+      →
+    </div>
+
+
+    <div class="step">
+
+      🗳️<br>
+
+      <b>
+        Participate
+      </b>
+
+      <br>
+
+      <span class="small">
+        Future concept
+      </span>
+
+    </div>
+
+  </div>
+
+
+  <p class="small">
+
+    The final voting mechanism would require legal
+    authorization, official cooperation, rigorous
+    security testing and compliance with election
+    requirements.
+
+  </p>
+
 </section>
 
+
+<!-- ========================= -->
+<!-- SLIDE 5 -->
+<!-- ========================= -->
+
 <section class="slide">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">07 · Future Vision</div><h2>Build → Test → Secure → Collaborate</h2>
-<div class="timeline"><div class="card"><div class="number">1</div><h3>Prototype</h3><p class="small">Frontend concept and user experience.</p></div><div class="card"><div class="number">2</div><h3>Full Stack</h3><p class="small">Database, authentication and verified content.</p></div><div class="card"><div class="number">3</div><h3>Security</h3><p class="small">Testing, privacy, auditability and accessibility.</p></div><div class="card"><div class="number">4</div><h3>Collaboration</h3><p class="small">Work with qualified experts and relevant authorities if permitted.</p></div></div>
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    04 · Live Prototype
+  </div>
+
+  <h2>
+    This is what I built
+  </h2>
+
+
+  <div class="demo">
+
+
+    <div class="demo-window">
+
+      <div class="demo-top">
+
+        🇳🇵 YuwaVoice Dashboard
+
+      </div>
+
+
+      <div class="demo-body">
+
+        <div class="mini-row">
+
+          <div class="mini">
+
+            Demo Participants
+
+            <b>
+              1,240
+            </b>
+
+          </div>
+
+
+          <div class="mini">
+
+            Candidate Profiles
+
+            <b>
+              3
+            </b>
+
+          </div>
+
+        </div>
+
+
+        <div class="mini-row">
+
+          <div class="mini">
+
+            Issues Compared
+
+            <b>
+              6
+            </b>
+
+          </div>
+
+
+          <div class="mini">
+
+            Countries
+
+            <b>
+              18
+            </b>
+
+          </div>
+
+        </div>
+
+
+        <div class="demo-button">
+
+          View Candidates →
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div>
+
+      <h3>
+        Live demo flow
+      </h3>
+
+      <p>
+
+        First I show the dashboard.
+        Then I open the candidate profiles,
+        move to the issue comparison,
+        and demonstrate the non-binding
+        youth preference feature.
+
+      </p>
+
+
+      <p class="small">
+
+        The candidate profiles and numbers
+        in this university prototype are
+        fictional sample data.
+
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
+
+
+<!-- ========================= -->
+<!-- SLIDE 6 -->
+<!-- ========================= -->
+
+<section class="slide">
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    05 · Product Experience
+  </div>
+
+  <h2>
+    Information before preference
+  </h2>
+
+
+  <div class="grid">
+
+
+    <div class="card">
+
+      <div class="icon">
+        👥
+      </div>
+
+      <h3>
+        Candidate Profiles
+      </h3>
+
+      <p class="small">
+
+        A simple profile page for each candidate,
+        using verified information in a future
+        real version.
+
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        📊
+      </div>
+
+      <h3>
+        Issue Comparison
+      </h3>
+
+      <p class="small">
+
+        The same topics can be displayed
+        side by side so users can form
+        their own views.
+
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        🗳️
+      </div>
+
+      <h3>
+        Demo Preference
+      </h3>
+
+      <p class="small">
+
+        The current poll is only a UI
+        demonstration. It does not record
+        a real election vote.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- SLIDE 7 -->
+<!-- ========================= -->
+
+<section class="slide">
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    06 · Technology
+  </div>
+
+  <h2>
+    What I have built vs. what comes next
+  </h2>
+
+
+  <div class="tech">
+
+
+    <div class="card">
+
+      <div class="icon">
+        🌐
+      </div>
+
+      <h3>
+        HTML
+      </h3>
+
+      <p class="small">
+        Structure
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        🎨
+      </div>
+
+      <h3>
+        CSS
+      </h3>
+
+      <p class="small">
+        Responsive design
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        ⚡
+      </div>
+
+      <h3>
+        JavaScript
+      </h3>
+
+      <p class="small">
+        Interactions
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="icon">
+        ☁️
+      </div>
+
+      <h3>
+        Deployment
+      </h3>
+
+      <p class="small">
+        Web prototype
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="grid">
+
+
+    <div class="card">
+
+      <h3>
+        Next: Backend
+      </h3>
+
+      <p class="small">
+        Database, accounts and verified content.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        Next: Security
+      </h3>
+
+      <p class="small">
+        Authentication, privacy, encryption
+        and audit systems.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h3>
+        Next: Research
+      </h3>
+
+      <p class="small">
+        Legal, technical and electoral
+        requirements before any official integration.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- SLIDE 8 -->
+<!-- ========================= -->
+
+<section class="slide">
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    07 · Future Vision
+  </div>
+
+  <h2>
+    Build → Test → Secure → Collaborate
+  </h2>
+
+
+  <div class="timeline">
+
+
+    <div class="card">
+
+      <div class="number">
+        1
+      </div>
+
+      <h3>
+        Prototype
+      </h3>
+
+      <p class="small">
+        Frontend concept and user experience.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="number">
+        2
+      </div>
+
+      <h3>
+        Full Stack
+      </h3>
+
+      <p class="small">
+        Database, authentication
+        and verified content.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="number">
+        3
+      </div>
+
+      <h3>
+        Security
+      </h3>
+
+      <p class="small">
+        Testing, privacy, auditability
+        and accessibility.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="number">
+        4
+      </div>
+
+      <h3>
+        Collaboration
+      </h3>
+
+      <p class="small">
+        Work with qualified experts
+        and relevant authorities if permitted.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- SLIDE 9 -->
+<!-- ========================= -->
 
 <section class="slide final">
-<div class="logo"><span>🇳🇵</span>YuwaVoice Nepal</div><div class="kicker">08 · Closing</div><h1>Let's build it<br><span class="highlight">together.</span></h1>
-<div class="quote"><p>“I don't want to build this idea alone. I hope to build a great team here at this university, with students from computer engineering, business, design, and other fields. I also hope our professors can guide us and help us turn this idea from a university prototype into something that can be studied and developed responsibly.”</p></div>
-<p class="subtitle">Thank you.</p><div class="note">YuwaVoice Nepal · Your voice. Your choice. Your future.</div>
+
+  <div class="logo">
+    <span>🇳🇵</span>
+    YuwaVoice Nepal
+  </div>
+
+  <div class="kicker">
+    08 · Closing
+  </div>
+
+  <h1>
+    Let's build it<br>
+    <span class="highlight">
+      together.
+    </span>
+  </h1>
+
+
+  <div class="quote">
+
+    <p>
+
+      “I don't want to build this idea alone.
+      I hope to build a great team here at this
+      university, with students from computer
+      engineering, business, design, and other
+      fields. I also hope our professors can guide
+      us and help us turn this idea from a
+      university prototype into something that
+      can be studied and developed responsibly.”
+
+    </p>
+
+  </div>
+
+
+  <p class="subtitle">
+    Thank you.
+  </p>
+
+
+  <div class="note">
+
+    YuwaVoice Nepal · Your voice.
+    Your choice. Your future.
+
+  </div>
+
 </section>
 
-<div class="controls"><button onclick="prevSlide()">← Back</button><button onclick="nextSlide()">Next →</button></div>
+
+<!-- NAVIGATION -->
+
+<div class="controls">
+
+  <button onclick="prevSlide()">
+    ← Back
+  </button>
+
+  <button onclick="nextSlide()">
+    Next →
+  </button>
+
+</div>
+
+
 <script>
-const slides=[...document.querySelectorAll('.slide')];let current=0;
-function showSlide(n){current=(n+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===current));document.getElementById('counter').textContent=`${String(current+1).padStart(2,'0')} / ${String(slides.length).padStart(2,'0')}`;document.getElementById('progress').style.width=((current+1)/slides.length*100)+'%'}
-function nextSlide(){showSlide(current+1)}function prevSlide(){showSlide(current-1)}
-document.addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();nextSlide()}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();prevSlide()}if(e.key==='Home')showSlide(0);if(e.key==='End')showSlide(slides.length-1)});showSlide(0);
+
+const slides =
+  [...document.querySelectorAll(".slide")];
+
+let current = 0;
+
+
+function showSlide(number){
+
+  current =
+    (number + slides.length)
+    % slides.length;
+
+
+  slides.forEach((slide,index)=>{
+
+    slide.classList.toggle(
+      "active",
+      index === current
+    );
+
+  });
+
+
+  document.getElementById("counter")
+    .textContent =
+    String(current + 1).padStart(2,"0")
+    + " / "
+    + String(slides.length).padStart(2,"0");
+
+
+  document.getElementById("progress")
+    .style.width =
+    ((current + 1) / slides.length * 100)
+    + "%";
+
+}
+
+
+function nextSlide(){
+
+  showSlide(current + 1);
+
+}
+
+
+function prevSlide(){
+
+  showSlide(current - 1);
+
+}
+
+
+/* Keyboard controls */
+
+document.addEventListener(
+  "keydown",
+  function(event){
+
+    if(
+      event.key === "ArrowRight" ||
+      event.key === "PageDown" ||
+      event.key === " "
+    ){
+
+      event.preventDefault();
+
+      nextSlide();
+
+    }
+
+
+    if(
+      event.key === "ArrowLeft" ||
+      event.key === "PageUp"
+    ){
+
+      event.preventDefault();
+
+      prevSlide();
+
+    }
+
+
+    if(event.key === "Home"){
+
+      showSlide(0);
+
+    }
+
+
+    if(event.key === "End"){
+
+      showSlide(slides.length - 1);
+
+    }
+
+  }
+);
+
+
+showSlide(0);
+
 </script>
+
 </body>
 </html>
